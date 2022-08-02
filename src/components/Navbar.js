@@ -31,4 +31,4 @@ export default function Navbar(props) {
 }
 
 // eslint-disable-next-line react/no-typos
-Navbar.PropTypes = {title: PropTypes.string, about: PropTypes.string}
+Navbar.propTypes = {title: PropTypes.string, about: PropTypes.string}
