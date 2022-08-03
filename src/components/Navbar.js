@@ -31,7 +31,9 @@ export default function Navbar(props) {
 }
 
 // eslint-disable-next-line react/no-typos
-Navbar.propTypes = {title: PropTypes.string, about: PropTypes.string}
+Navbar.propTypes = {
+    title: PropTypes.string.isRequired,
+    about: PropTypes.string}
 
 Navbar.defaultProps={
     title:'Set title here',
