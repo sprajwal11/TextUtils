@@ -4,9 +4,14 @@ import React,{useState} from 'react'
 
 export default function 
 (props) {
-    const handleUpClick=()=>{
+    const toUpperCase=()=>{
         // console.log("Uppercase was clicked "+text);
         let newText=text.toUpperCase();
+        setText(newText);
+    } 
+    const toLowerCase=()=>{
+        // console.log("Uppercase was clicked "+text);
+        let newText=text.toLowerCase();
         setText(newText);
     } 
     const handleOnChange=(event)=>{
@@ -22,7 +27,8 @@ export default function
         <div className="mb-3">
         <textarea className="form-control" value={text} onChange={handleOnChange} id="mybox" rows="15"></textarea>
         </div>
-        <button className="btn btn-primary" onClick={handleUpClick}>Convert to Uppercase</button>
+        <button className="btn btn-primary" onClick={toUpperCase}>Convert to Uppercase</button>
+        <button className="btn btn-primary mx-2" onClick={toLowerCase}>Convert to Lowercase</button>
     </div>
   )
 }
