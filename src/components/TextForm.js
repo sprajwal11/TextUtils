@@ -10,12 +10,12 @@ export default function
         setText(newText);
     } 
     const toLowerCase=()=>{
-        // console.log("Uppercase was clicked "+text);
+        // console.log("Lowercase was clicked "+text);
         let newText=text.toLowerCase();
         setText(newText);
     } 
     const toClearText=()=>{
-        // console.log("Uppercase was clicked "+text);
+        // console.log("Cleartext was clicked "+text);
         let newText='';
         setText(newText);
     } 
