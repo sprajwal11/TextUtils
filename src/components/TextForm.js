@@ -20,17 +20,17 @@ export default function
         setText(newText);
     } 
     const toCopy=()=>{
-        console.log("Content has been copied");
+        // console.log("Content has been copied");
         var text=document.getElementById("myBox");
         text.select();
-        text.setSelectionRange(0,9999);
+        // text.setSelectionRange(0,9999);
         navigator.clipboard.writeText(text.value);
     }
     const handleOnChange=(event)=>{
         // console.log("Handled on change");
         setText(event.target.value);
     }
-    const[text,setText]=useState('Enter Text Here');
+    const[text,setText]=useState('');
     //setText("Write here");
 
      return (
@@ -38,7 +38,7 @@ export default function
     <div>
         <h1>{props.heading}</h1>
         <div className="mb-3">
-        <textarea className="form-control" value={text} onChange={handleOnChange} id="mybox" rows="15"></textarea>
+        <textarea className="form-control" value={text} onChange={handleOnChange} id="mybox" rows="15" placeholder='Enter text here'></textarea>
         </div>
         <button className="btn btn-primary" onClick={toUpperCase}>Convert to Uppercase</button>
         <button className="btn btn-primary mx-2" onClick={toLowerCase}>Convert to Lowercase</button>
