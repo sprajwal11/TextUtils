@@ -19,6 +19,13 @@ export default function
         let newText='';
         setText(newText);
     } 
+    const toCopy=()=>{
+        console.log("Content has been copied");
+        var text=document.getElementById("myBox");
+        text.select();
+        text.setSelectionRange(0,9999);
+        navigator.clipboard.writeText(text.value);
+    }
     const handleOnChange=(event)=>{
         // console.log("Handled on change");
         setText(event.target.value);
@@ -36,6 +43,7 @@ export default function
         <button className="btn btn-primary" onClick={toUpperCase}>Convert to Uppercase</button>
         <button className="btn btn-primary mx-2" onClick={toLowerCase}>Convert to Lowercase</button>
         <button className="btn btn-primary mx-2" onClick={toClearText}>Clear Text</button>
+        <button className="btn btn-primary mx-2" onClick={toCopy}>Copy Text</button>
     </div>
     <div className="container my-2">
         <h1>Your text summary</h1>
